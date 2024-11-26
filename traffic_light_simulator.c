@@ -158,40 +158,7 @@ int main() {
         
     }
 
-    /*while (!WindowShouldClose()) {
-        int timeNow = autoTime();
-        setting = trafficSetting(timeNow);
-
-        for (int i = 0; i < NUM_ROADS; i++) {
-            roads[i].redTime = redTime(i + 1, timeNow, m[i]);
-        }
-
-        for (int i = 0; i < NUM_ROADS; i++) {
-            if (sampleTime[i] > 0) sampleTime[i]--;
-        }
-
-        
-
-        BeginDrawing();
-        ClearBackground(BLACK);
-
-        for (int i = 0; i < NUM_ROADS; i++) {
-            DrawRectangleRounded(trafficLights[i], 0.2, 16, GRAY);
-
-            float centerX = trafficLights[i].x + trafficLights[i].width / 2;
-            float centerY = trafficLights[i].y + trafficLights[i].height / 4;
-
-            DrawCircle(centerX, centerY, 25, modes[i] == 0 ? RED : BLACK);
-            DrawCircle(centerX, centerY + 70, 25, modes[i] == 2 ? ORANGE : BLACK);
-            DrawCircle(centerX, centerY + 140, 25, modes[i] == 1 ? GREEN : BLACK);
-
-            DrawText(TextFormat("%02d", sampleTime[i]), trafficLights[i].x + 15, trafficLights[i].y + trafficLights[i].height + 20, 20, WHITE);
-        }
-
-        EndDrawing();
-        WaitTime(1.0);
-        updateTrafficLights(modes, sampleTime, m, roads);
-    }*/
+  
         
 while (!WindowShouldClose()) {
     int timeNow = autoTime();
@@ -227,7 +194,7 @@ while (!WindowShouldClose()) {
         DrawCircle(centerX, centerY + 140, 25, modes[i] == 1 ? GREEN : BLACK);
 
         DrawNumber(sampleTime[i], trafficLights[i].x + 15, trafficLights[i].y + trafficLights[i].height + 20, 10,modes[i] == 0 ? RED:modes[i] == 2 ? ORANGE : GREEN);
-        //DrawText(TextFormat("%02d", sampleTime[i]), trafficLights[i].x + 15, trafficLights[i].y + trafficLights[i].height + 20, 20, WHITE);
+        
     }
 
     EndDrawing();
